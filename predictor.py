@@ -4,7 +4,6 @@ from common import differential_vector, filter_stats
 from glob import glob
 from os import path
 from sklearn import tree
-from sklearn.externals.six import StringIO
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor

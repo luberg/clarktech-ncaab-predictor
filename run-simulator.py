@@ -20,11 +20,11 @@ from os import path, makedirs
 from predictor import Predictor
 from pymongo import MongoClient
 from save_json import save_predictions_json, save_simulation
-from sportsreference.constants import AWAY, REGULAR_SEASON
-from sportsreference.ncaab.boxscore import Boxscores
-from sportsreference.ncaab.conferences import Conferences
-from sportsreference.ncaab.rankings import Rankings
-from sportsreference.ncaab.teams import Teams
+from sportsipy.constants import AWAY, REGULAR_SEASON
+from sportsipy.ncaab.boxscore import Boxscores
+from sportsipy.ncaab.conferences import Conferences
+from sportsipy.ncaab.rankings import Rankings
+from sportsipy.ncaab.teams import Teams
 
 
 CONFERENCE_TOURNAMENT = 'conference-tourney-simulator'
@@ -780,7 +780,8 @@ def arguments():
 def main():
     args = arguments()
     teams = Teams()
-    rankings = Rankings().current
+    year = 2021
+    rankings = Rankings(year).current
     predictor = Predictor()
     initiate_algorithm(args, predictor, teams, rankings)
 

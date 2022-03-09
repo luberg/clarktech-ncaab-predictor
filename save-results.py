@@ -3,7 +3,7 @@ from datetime import datetime
 from os import listdir
 from os.path import isfile, join
 from save_json import save_json
-from sportsreference.ncaab.boxscore import Boxscores
+from sportsipy.ncaab.boxscore import Boxscores
 
 
 def corresponding_matchup(prediction, winner, loser):

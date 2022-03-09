@@ -4,8 +4,8 @@ from glob import iglob
 from os import makedirs
 from os.path import exists
 from predictor import DATASET_NAME
-from sportsreference.ncaab.rankings import Rankings
-from sportsreference.ncaab.teams import Teams
+from sportsipy.ncaab.rankings import Rankings
+from sportsipy.ncaab.teams import Teams
 
 
 def determine_location(game, team, sos, srs, opp_sos, opp_srs):
